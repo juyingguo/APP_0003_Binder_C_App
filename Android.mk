@@ -27,7 +27,7 @@ endif
 include $(CLEAR_VARS)
 #LOCAL_SHARED_LIBRARIES := liblog libselinux
 LOCAL_SRC_FILES := test_client.c binder.c
-#LOCAL_CFLAGS += $(svc_c_flags)
+LOCAL_CFLAGS += $(svc_c_flags)
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_MODULE := test_client
 LOCAL_MODULE_TAGS := optional
@@ -36,7 +36,7 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 #LOCAL_SHARED_LIBRARIES := liblog libselinux
 LOCAL_SRC_FILES := test_server.c binder.c
-#LOCAL_CFLAGS += $(svc_c_flags)
+LOCAL_CFLAGS += $(svc_c_flags)
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_MODULE := test_server
 LOCAL_MODULE_TAGS := optional
