@@ -9,7 +9,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <linux/types.h>
-#include<stdbool.h>
+#include <stdbool.h>
 #include <string.h>
 
 #include "binder.h"
@@ -120,7 +120,7 @@ struct binder_state *binder_open(size_t mapsize)
                 strerror(errno));
         goto fail_open;
     }
-
+    fprintf(stdout,"binder: /dev/binder open success.\n");
     if ((ioctl(bs->fd, BINDER_VERSION, &vers) == -1) ||
         (vers.protocol_version != BINDER_CURRENT_PROTOCOL_VERSION)) {
         fprintf(stderr, "binder: driver version differs from user space\n");
